@@ -40,7 +40,7 @@ function processFirstItem(stringList, callback) {
  * @param list an array with elements of any type.
  * @param callback function that takes a number as its argument.
  * @returns the result of invoking `callback` passing the LENGTH of `list`.
- * 
+ *  * 
  * Examples of usage of this higher-order function:
  * [1] Invoking `processLength` passing `['foo', 'bar']` and `(num) => num + 1000`,
  * should return 1002.
@@ -48,8 +48,8 @@ function processFirstItem(stringList, callback) {
  * [2] Invoking `processLength` passing `[]` and `(num) => "There are " + num`,
  * should return "There are 0".
 */
-function processLength(/* CODE HERE */) {
-  /* CODE HERE */
+function processLength(list, callback) {
+  return callback (list.length);
 }
 
 /**
@@ -66,8 +66,8 @@ function processLength(/* CODE HERE */) {
  * Invoking `processLastItem` passing `['foo', 'bar']` and `(str) => str + str`,
  * should return 'barbar'.
 */
-function processLastItem(/* CODE HERE */) {
-  /* CODE HERE */
+function processLastItem(stringList, callback) {
+  return callback (stringList[stringList.length -1]);
 }
 
 /**
@@ -87,8 +87,12 @@ function processLastItem(/* CODE HERE */) {
  * [2] Invoking `processSum` passing `[]` and `(num) => num + 1000`,
  * should return 1000.
 */
-function processSum(/* CODE HERE */) {
-  /* CODE HERE */
+function processSum(numberList, callback){
+  let sum= 0;
+  for(i=0; i < numberList[i]; i++){
+    sum= sum + numberList[i];
+  }
+  return callback(sum);
 }
 
 /**
@@ -109,8 +113,8 @@ function processSum(/* CODE HERE */) {
  * [2] Invoking `processProduct` passing 25 and 0 and `(num) => num + 1000`,
  * should return 1000.
 */
-function processProduct(/* CODE HERE */) {
-  /* CODE HERE */
+function processProduct(num1, num2, callback) {
+  return callback (num1 * num2);
 }
 
 /**
@@ -133,8 +137,8 @@ function processProduct(/* CODE HERE */) {
  * "lady gaga" and `['foo', 'bar']` and `(bool) => bool ? 'nice!' : 'sad'`,
  * should return "sad".
 */
-function processContains(/* CODE HERE */) {
-  /* CODE HERE */
+function processContains(item, list, callback) {
+  return callback (list.includes(item));
 }
 
 /**
