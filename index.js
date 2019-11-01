@@ -185,7 +185,7 @@ function processDuplicateFree(/* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS
 function getFullNames(runners) {
   let fullNames = [];
   runners.forEach((runner) =>{
-    fullNames.push('${runner.last_name}, ${runner.first_name}');
+    fullNames.push(runner.full_name = runner.last_name+", "+runner.first_name);
   });
   return fullNames;
 }
