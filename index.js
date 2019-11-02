@@ -162,12 +162,12 @@ function processContains(item, list, callback) {
 */
 function processDuplicateFree(list, callback) {
   let unique = [];
-  for (element of list) {
+  list.forEach (element => {
     let isInList = unique.includes(element);
     if (!isInList) {
       unique.push(element);
     }
-  }
+  });
   return callback(unique);
 }
 
